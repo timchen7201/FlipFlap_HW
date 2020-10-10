@@ -17,6 +17,8 @@ module TsvBuddy
   # to_tsv: converts @data into tsv string
   # returns: String in TSV format
   def to_tsv
-    @data
+    headers = @data[0].keys.join("\t") + "\n"
+    content = @data.map { |row| row.values.join("\t") }.join("\n") + "\n"
+    headers + content
   end
 end
