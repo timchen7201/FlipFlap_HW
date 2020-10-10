@@ -5,7 +5,7 @@ require 'csv'
 module YamlBuddy
   def take_yaml(yaml)
     @data = YAML.safe_load(yaml)
-    
+
   end
 
   def to_yaml
